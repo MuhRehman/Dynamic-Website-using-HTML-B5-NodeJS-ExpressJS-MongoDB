@@ -8,13 +8,9 @@ const userSchema = mongoose.Schema({
         email:{
             type :String,
             required:true,
-            validator(value){
-                if (!validator.isEmail(value)) {
-                    throw new Error("invalid email id")
-                }
-            }
+          
         },
-        name:{
+        lname:{
             type :String,
             required:true
         },
@@ -23,6 +19,11 @@ const userSchema = mongoose.Schema({
             required:true
               
         },
+        filename:{
+            type :String,
+            required:true
+              
+        }
 })
 
 
